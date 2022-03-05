@@ -2,7 +2,6 @@ class Api::BooksController < ApplicationController
     before_action :set_author
     before_action :set_book, only: [:show, :update, :destroy]
     def index
-        @author = Author.find(params[:author_id])
         render json: @author.books.all
     end
 
